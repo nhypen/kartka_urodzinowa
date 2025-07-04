@@ -1,16 +1,17 @@
-# This is a sample Python script.
+from datetime import datetime
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# pobieranie danych od użytkownika
+imie_odbiorcy = input("Podaj imię odbiorcy: ")
+rok_urodzenia = int(input("Podaj rok urodzenia: "))
+wiadomosc = input("Wpisz spersonalizowaną wiadomość: ")
+imie_nadawcy = input("Podaj swoje imie (nadawcy): ")
 
+# Obliczanie wieku
+obecny_rok = datetime.now().year
+wiek = obecny_rok - rok_urodzenia
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# generowanie kartki urodzinowej
+print("\n--- Kartka Urodzinowa ---")
+print(f"{imie_odbiorcy}, wszystkiego najlepszego z okazji {wiek} urodzin!")
+print(wiadomosc)
+print(f"{imie_nadawcy}")
